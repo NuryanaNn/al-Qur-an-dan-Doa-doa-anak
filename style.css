@@ -1,0 +1,689 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap');@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    align-items: center;
+}
+
+header nav{
+    padding: 1rem 6%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+header .logo img{
+    width: 40px;
+}
+
+header nav .nav-menu{
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+header nav .nav-menu a{
+    color: #fff;
+    text-decoration: none;
+}
+
+header .burger-menu{
+    display: none;
+    cursor: pointer;
+}
+
+header nav .burger-menu .bars{
+    background-color: #fff;
+    width: 30px;
+    height: 2px;
+    margin-bottom: 5px;
+}
+
+header .mobile-nav{
+    position: fixed;
+    left: -100%;
+    padding: 50px 20px;
+    background-color: #fff;
+    top: 0;
+    transition: 1s;
+    height: 100%;
+}
+
+header .mobile-nav.active{
+    left: 0;
+    transition: 1s;
+}
+
+header .mobile-nav ul{
+    list-style: none;
+}
+
+header .mobile-nav ul li{
+    margin-bottom: 20px;
+}
+
+header .mobile-nav ul li a{
+    text-decoration: none;
+    color: #000;
+}
+
+header nav.sticky{
+    background-color: #fff;
+    color: #000;
+}
+
+header nav.sticky .nav-menu a{
+    color: #000;
+}
+
+header nav.sticky .burger-menu .bars{
+    background-color: #000;
+}
+
+/* Section Index */
+.bannerIndex{
+    background: url('bgQuran.jpg');
+    height: 655px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 0rem 8%;
+}
+
+.bannerIndex h3{
+    color: #fff;
+    font-size: 3rem;
+}
+
+
+.bannerIndex p{
+    color: #fff;
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.banner{
+    background: linear-gradient(to top left, #990099 0%, #ff99cc 78%);
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    padding: 0 6%;
+    position: relative;
+}
+
+.banner .title{
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.banner h3{
+    font-size: 2.5rem;
+    color: #fff;
+    z-index: 100;
+}
+
+.banner p{
+    font-size: 1.5rem;
+    color: #fff;
+    z-index: 100;
+}
+
+
+/* Main */
+main .content-doa{
+    padding: 2rem 3%;
+}
+
+
+main .content-doa .content-doa-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 15px;
+    margin-top: 40px;
+}
+
+main .content-doa .content-doa-wrapper a{
+    text-decoration: none;
+}
+
+main .content-doa .content-doa-wrapper .card{
+    background-color: orange;
+    padding: 20px 30px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    background-repeat: no-repeat;
+    box-shadow: 3px 5px 20px 5px rgba(0, 0, 0, 0.3);
+}
+
+main .content-doa .content-doa-wrapper .card::before{
+    content: '';
+    position: absolute;
+    clip-path: circle(50%);
+    background-color: rgb(255, 0, 0, 0.3);
+    width: 200px;
+    height: 200px;
+    right:0;
+}
+
+main .content-doa .content-doa-wrapper .card .overlay{
+   background: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+main .content-doa .content-doa-wrapper .card .content-text{
+    z-index: 90;
+}
+
+
+
+main .content-doa .card h3{
+    padding: 10px 0;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+main .content-doa .card p{
+    color: #fff;
+}
+
+main .content-doa-wrapper .card button{
+    padding: 5px 15px;
+    background-color: #fff;
+    border-radius: 20px;
+    border: none;
+    margin-top: 15px;
+    font-weight: bolder;
+}
+
+/* Section 2 */
+
+.bannerDoa{
+    background: linear-gradient(to top left, #990099 0%, #ff99cc 78%);
+    min-height: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.bannerDoa::before{
+    background: url('berdoa2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-position: left;
+    object-fit: cover;
+    position: relative;
+    text-align: center;
+    content: '';
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    filter: opacity(30%);
+}
+
+.bannerDoa .overlay{
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.bannerDoa h3{
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.bannerDoa h4{
+    font-size: 2.5rem;
+    color: #fff;
+    margin-top: 15px;
+}
+
+.doa-details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.doa-details .content{
+    width: 100%;
+}
+
+.doa-details .nav-doa{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    background-color: #d9d9d9;
+    align-items: center;
+}
+
+.doa-details .nav-doa .number{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border: 1px solid #990099;
+    border-radius: 50%;
+}
+
+.doa-details .nav-doa ul{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    list-style: none;
+}
+
+.doa-details .nav-doa ul li{
+    color: #990099;
+}
+
+.doa-details .content h2{
+    text-align: right;
+    padding: 10px 0;
+}
+
+.doa-details .content h3{
+    padding: 10px 0;
+    font-size: 1.1rem;
+}
+
+.doa-details .content .details-ayat{
+    padding: 10px;
+}
+
+
+
+
+/* Page 3 ( Al-Quran) */
+.bannerAlQuran{
+    background: linear-gradient(to top left, #ff99ff 0%, #cc3399 100%);
+    min-height: 300px;
+    display: flex;
+    text-align: center;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.bannerAlQuran p{
+    font-size: 1rem;
+    color: #fff;
+    margin-top: 15px;
+    z-index: 90;
+    font-weight: bold;
+}
+
+.bannerAlQuran::before{
+    background: url('quran.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-position: left;
+    object-fit: cover;
+    position: relative;
+    text-align: center;
+    content: '';
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: opacity(30%);
+}
+
+.bannerAlQuran h3{
+    color: #fff;
+    font-size: 2rem;
+    z-index: 90;
+}
+
+.contentAl-Quran{
+    margin-top: 30px;
+    padding: 2%;
+}
+
+.contentAl-Quran .title{
+    text-align: center;
+}
+
+.contentAl-Quran .title h3{
+    font-size: 2rem;
+}
+
+.contentAl-Quran .contentAlQuran-wrapper{
+    margin-top: 50px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.contentAl-Quran .contentAlQuran-wrapper a{
+    color: #000;
+    text-decoration: none;
+}
+
+.contentAl-Quran .contentAlQuran-wrapper .card{
+    background-color: #fff;
+    padding: 30px 20px;
+    border: 1px solid purple;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contentAl-Quran .contentAlQuran-wrapper .card .content{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    width: 100%;
+}
+
+.contentAl-Quran .contentAlQuran-wrapper .card .content .number{
+    background: url('pemisah.png');
+    height: 50px;
+    width: 50px;
+    border:1px solid purple;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    color: purple;
+}
+
+.contentAl-Quran .contentAlQuran-wrapper .card .content .details ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+
+.contentAl-Quran .contentAlQuran-wrapper .card .content .details ul li:nth-child(2){
+    margin-top: -12px;
+}
+
+.contentAl-Quran .contentAlQuran-wrapper .card .content .surah{
+    position: absolute;
+    right: 20px
+}
+
+.contentAl-Quran .contentAlQuran-wrapper .card .content .surah h3{
+    color: #990099;
+}
+
+.contentAl-Quran .contentAlQuran-wrapper .card::before{
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 100%;
+    background-color: purple;
+    right: 0;
+    bottom: 0;
+    border-radius: 50% 0 0 50%;
+    filter: opacity(5%);
+}
+
+
+.contentAl-Quran .contentAlQuran-wrapper .card h3{
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.contentAl-Quran .contentAlQuran-wrapper .card h5{
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+.contentAl-Quran .contentAlQuran-wrapper .card img{
+    width: 130px;
+    z-index: 90;
+}
+
+
+
+
+/* Surah */
+.bannerSurah{
+    background: linear-gradient(to top left, #990099 0%, #ff99cc 78%);
+    min-height: 300px;
+    display: flex;
+    text-align: center;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.bannerSurah::before{
+    background: url('quran.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-position: right;
+    object-fit: cover;
+    position: relative;
+    text-align: center;
+    content: '';
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: opacity(30%);
+}
+
+.bannerSurah::after{
+    background: url('quran.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-position: left;
+    object-fit: cover;
+    position: relative;
+    text-align: center;
+    content: '';
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: opacity(30%);
+}
+
+.bannerSurah h3{
+    font-size: 2rem;
+    color: #fff;
+}
+
+.bannerSurah h5{
+    color: #fff;
+    font-size: 1rem;
+    position: relative;
+    margin-top: 10px;
+}
+
+.bannerSurah h5::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    bottom: -10px;
+}
+
+.bannerSurah .place{
+    margin-top: 20px;
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.bannerSurah .place li{
+    color: #fff;
+}
+
+.bannerSurah p{
+    margin-top: 30px;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.contentAyat .nav-surah{
+    background-color: #d9d9d9;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contentAyat .nav-surah .details ul{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.contentAyat .nav-surah .details ul li{
+    color: purple;
+}
+
+.contentAyat .nav-surah .ayat{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid purple;
+    text-align: center;
+    line-height: 40px;
+}
+
+.contentAyat  .textayat{
+    text-align: right;
+    padding: 10px;
+    color: #444;
+}
+
+.contentAyat  .translation h4{
+    font-weight: light;
+    text-align: left;
+    color: #444;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.contentAyat .murotal{
+    display: flex;
+    justify-content: center;
+    column-gap: 50px;
+    text-align: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contentAyat .murotal .murotal-card p{
+    margin: 15px 0;
+}
+
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 10px;
+    position: relative;
+    margin-top: 40px;
+    width: 100%;
+}
+
+footer h3{
+    font-size: .9rem;
+    color: #444;
+}
+
+
+
+@media (max-width:780px) {
+    header nav .nav-menu{
+        display: none;
+    }
+
+    header .burger-menu{
+        display: block;
+    }
+
+    header .mobile-nav{
+        position: fixed;
+        left: -100%;
+        width: 50%;
+    }
+
+    /* Surah */
+    .bannerSurah::after{
+        display: none;
+    }
+    
+}
+
